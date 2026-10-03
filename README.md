@@ -25,21 +25,27 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [x] Describe the game's purpose.
+
+The purpose of the game is to have the User guess a number within a range. Hints can be given if they're close or not. The game ends when the User guesses the number correctly. 
+- [x] Detail which bugs you found.
+
+I found a wide range of bugs, all logic and or display issues. Values don't update or display correctly on the backend or frontend. The "New Game" button wouldn't truly reset the game. The attempts would reset but not the history, making it impossible to enter guesses. 
+- [x] Explain what fixes you applied.
+
+The ones I fixed were the hint messages and the New Game functionality as I saw those important to have as an MVP to then build off with the other functions. For the hint messages, the conditional logic was fine but the messages being displayed were incorrect. So I updated those and for the New Game button, there were variables that failed to be reset BEFORE the app was 'rerun'. So I added resets for score, status, and history. 
 
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
-
-**Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
+1. User enters a guess into the text field.
+2. User enters 84.
+3. Game returns a message as a hint: "Go LOWER!"
+4. User enters 24.
+3. Game returns a message as a hint: "Go HIGHER!"
+4. Continue until the User guesses correctly.
+5. Game ends and a User can click on "New Game" to start again with a fresh secret number.
 
 ## 🧪 Test Results
 
